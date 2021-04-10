@@ -27,14 +27,14 @@ class MainActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.CUPCAKE)
     private fun addNickname(view: View) {
-       val editText = findViewById<EditText>(R.id.nickname_edit)
-       val nicknameTextView = findViewById<TextView>(R.id.nickname_text)
-       val altCizgiSil = editText.text.toString() +  " "
-       nicknameTextView.text = altCizgiSil
-       editText.visibility = View.GONE
+        val editText = findViewById<EditText>(R.id.nickname_edit)
+        val nicknameTextView = findViewById<TextView>(R.id.nickname_text)
+        val altCizgiSil = editText.text.toString() +  " "
+        nicknameTextView.text = altCizgiSil
+        editText.visibility = View.GONE
         // button gizleniyor
-       view.visibility = View.GONE
-       nicknameTextView.visibility = View.VISIBLE
+        view.visibility = View.GONE
+        nicknameTextView.visibility = View.VISIBLE
         // cikan klavyeyi gizle
         val imn = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imn.hideSoftInputFromWindow(view.windowToken, 0)
@@ -55,4 +55,5 @@ class MainActivity : AppCompatActivity() {
         val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.showSoftInput(editText, 0)
     }
+
 }
